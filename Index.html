@@ -7,8 +7,39 @@
      <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
 </head>
-<body class="bg-gray-50 min-h-screen font-sans">
-    <h1>Asssignment 05</h1>
+<body  class="bg-gray-50 min-h-screen font-sans">
+    <div id="login-page" class="flex flex-col items-center justify-center min-h-screen px-4">
+        <div class="card w-full max-w-md bg-base-100 shadow-2xl p-8 border border-gray-100">
+            <div class="text-center mb-8">
+                <div class="flex justify-center mb-4">
+                    <img src="assets - Copy/github-logo.png" alt="GitHub Logo" class="w-16">
+                </div>
+                <h1 class="text-3xl font-bold text-gray-800">GitHub Issues Tracker</h1>
+                <p class="text-gray-500 mt-2">Sign in to manage your issues</p>
+            </div>
+
+            <div class="form-control w-full">
+                <label class="label"><span class="label-text font-semibold">Username</span></label>
+                <input type="text" id="username" placeholder="Enter username" class="input input-bordered w-full focus:border-primary" />
+            </div>
+
+            <div class="form-control w-full mt-4">
+                <label class="label"><span class="label-text font-semibold">Password</span></label>
+                <input type="password" id="password" placeholder="Enter password" class="input input-bordered w-full focus:border-primary" />
+            </div>
+
+            <button onclick="handleLogin()" class="btn btn-primary w-full mt-8 text-white text-lg">Sign In</button>
+            
+            <div class="divider my-8 text-gray-400 font-bold text-sm">OR</div>
+            
+            <p class="text-center bg-blue-10 py-1 rounded-t-lg text-sm font-semibold">Demo Credentials:</p>
+            <div class="p-4 bg-yellow-50 rounded-b-lg border border-white-100 text-sm text-center">
+                <code class="text-xs">Username: admin</code><br>
+                <code class="text-xs">Password: admin123</code>
+            </div>
+        </div>
+    </div>
+
     
 </body>
 </html>
