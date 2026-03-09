@@ -16,3 +16,19 @@ function handleLogin() {
         alert(" Invalid Credentials. Please use the demo login.");
     }
 }
+/**
+  API Connect
+ */
+async function fetchAllIssues() {
+    toggleLoading(true);
+    try {
+        const response = await fetch(`${API_BASE}/issues`);
+        const result = await response.json();
+        allIssuesData = result.data || result; 
+        displayIssues(allIssuesData);
+    } catch (error) {
+        console.error("Fetch Error:", error);
+    } finally {
+        toggleLoading(false);
+    }
+}
